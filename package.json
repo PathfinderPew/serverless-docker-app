@@ -8,5 +8,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "serverless-offline": "^13.8.0",
+    "serverless-python-requirements": "^6.1.1"
+  }
 }
