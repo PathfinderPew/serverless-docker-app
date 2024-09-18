@@ -3,14 +3,19 @@ service: my-service
 provider:
   name: aws
   runtime: python3.8
+  stage: dev
+  region: us-east-1
+  versionFunctions: true
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
 
 functions:
   hello:
     handler: handler.hello
-
-    plugins:
-      - serverless-python-requirements
-      - serverless-offline
+    events: []
+    name: my-service-dev-hello
 
 custom:
   pythonRequirements:

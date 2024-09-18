@@ -1,0 +1,95 @@
+{
+  "C:\\Users\\BEP\\Documents\\Fall Semester 2024\\DevOps Internship\\serverless-docker-app": {
+    "versionSfCore": null,
+    "versionFramework": "4.3.3",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "C:\\Users\\BEP\\Documents\\Fall Semester 2024\\DevOps Internship\\serverless-docker-app",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "my-service",
+      "provider": {
+        "name": "aws",
+        "runtime": "python3.8",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "plugins": [
+        "serverless-python-requirements",
+        "serverless-offline"
+      ],
+      "functions": {
+        "hello": {
+          "handler": "handler.hello",
+          "events": [],
+          "name": "my-service-dev-hello"
+        }
+      },
+      "custom": {
+        "pythonRequirements": {
+          "dockerizePip": "non-linux"
+        }
+      }
+    },
+    "serviceRawFile": "service: my-service\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: python3.8\r\n  stage: dev\r\n  region: us-east-1\r\n  versionFunctions: true\r\n\r\nplugins:\r\n  - serverless-python-requirements\r\n  - serverless-offline\r\n\r\nfunctions:\r\n  hello:\r\n    handler: handler.hello\r\n    events: []\r\n    name: my-service-dev-hello\r\n\r\ncustom:\r\n  pythonRequirements:\r\n    dockerizePip: non-linux",
+    "command": [
+      "logs"
+    ],
+    "options": {
+      "debug": "*",
+      "function": "hello"
+    },
+    "error": null,
+    "params": {},
+    "machineId": "f2a4aa296a90a464dcba9c18695c059c",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "77d7eca8-3df9-4cf6-a37f-3ff11f7f7f76",
+    "orgName": "pathfinderpew",
+    "userId": "fVTrTMvxYLNqHKd7MX",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "pathfinderpew",
+    "subscription": null,
+    "userEmail": "pew.brandon@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "440744236214",
+    "projectType": "traditional",
+    "versionSf": "4.3.3",
+    "serviceProviderAwsCfStackName": "my-service-dev",
+    "integrations": {},
+    "serviceUniqueId": "arn:aws:cloudformation:us-east-1:440744236214:stack/my-service-dev/365de630-7558-11ef-8a28-0affcb32af3f",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:440744236214:stack/my-service-dev/365de630-7558-11ef-8a28-0affcb32af3f",
+    "serviceProviderAwsCfStackCreated": "2024-09-18T00:52:00.261Z",
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "HelloLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:440744236214:function:my-service-dev-hello:1",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-my-service-dev-HelloLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-us-east-1-0dd2707e-5504",
+        "ExportName": "sls-my-service-dev-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}

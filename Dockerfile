@@ -16,3 +16,9 @@ COPY . /app
 
 # Install any Python dependencies
 RUN pip install -r requirements.txt
+
+# Expose port 3000 (or any port your application uses)
+EXPOSE 3000
+
+# Set the default command to run the application (replace `app.py` with your main script)
+CMD ["python", "app.py"]
