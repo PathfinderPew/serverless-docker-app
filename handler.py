@@ -1,5 +1,10 @@
+import json
+
 def hello(event, context):
+    body = {
+        "message": "Go Serverless v4.0! Your function executed successfully!"
+    }
     return {
         "statusCode": 200,
-        "body": "Go Serverless v4.0! Your function executed successfully!"
+        "body": json.dumps(body)  # Serialize the JSON object to a string
     }

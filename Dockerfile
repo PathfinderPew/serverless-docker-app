@@ -17,6 +17,9 @@ COPY . /app
 # Install any Python dependencies
 RUN pip install -r requirements.txt
 
+# Install pytest for running tests
+RUN pip install pytest
+
 # Expose port 3000 (or any port your application uses)
 EXPOSE 3000
 
